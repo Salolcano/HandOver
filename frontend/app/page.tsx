@@ -7,8 +7,6 @@ import { reads } from "@/lib/genlayer/contract";
 import { formatGen, formatTime } from "@/lib/genlayer/format";
 import { useLoad } from "@/lib/hooks";
 
-const WORDS = ["the", "work", "isn't", "done", "until", "it's", "proven."];
-
 const STEPS = [
   ["write it down", "The client and the contractor agree a checklist for the end of the job: repository transferred, docs published, access removed. The final payment is locked against it and the terms are frozen."],
   ["hand over the proof", "Either side, and the helpers they authorize, register public web pages as evidence. Nobody else can write to the evidence set, and four of the twelve slots are always reserved for the two parties."],
@@ -22,14 +20,12 @@ export default function Home() {
   return (
     <>
       <section className="hero-lime" style={{ overflow: "hidden" }}>
-        <div className="wrap" style={{ padding: "56px 24px 40px", display: "grid", gridTemplateColumns: "minmax(0,1.3fr) minmax(0,.7fr)", gap: 32, alignItems: "end" }} id="hero">
-          <div>
-            <h1 className="display" style={{ fontSize: "clamp(56px, 11.5vw, 168px)", margin: 0 }}>
-              {WORDS.map((w) => <span key={w} style={{ display: "block" }}>{w}</span>)}
-            </h1>
-          </div>
-          <div style={{ paddingBottom: 12 }}>
-            <p style={{ fontSize: 19, lineHeight: 1.5, fontWeight: 500, margin: "0 0 28px", maxWidth: 380 }}>
+        <div className="wrap" style={{ padding: "72px 24px 56px" }}>
+          <h1 className="display" style={{ fontSize: "clamp(42px, 8vw, 120px)", margin: 0 }}>
+            the work isn&rsquo;t done<br />until it&rsquo;s proven.
+          </h1>
+          <div style={{ display: "flex", gap: 32, flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", marginTop: 48 }}>
+            <p style={{ fontSize: 18, lineHeight: 1.5, fontWeight: 500, margin: 0, maxWidth: 520 }}>
               Handover turns the end of a contract into a public record. Agree the checklist, put the evidence on chain, and let
               independent GenLayer validators decide whether the work is really handed over.
             </p>
@@ -39,15 +35,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <style>{`@media (max-width: 860px){ #hero{ grid-template-columns: 1fr !important } }`}</style>
       </section>
 
       {/* the same line, repeated and fading, in the manner of a manifesto wall */}
-      <section aria-hidden style={{ overflow: "hidden", padding: "40px 0", borderBottom: "1px solid var(--line)" }}>
-        <div className="stack wrap" style={{ gap: 56 }}>
+      <section aria-hidden style={{ overflow: "hidden", padding: "28px 0", borderBottom: "1px solid var(--line)" }}>
+        <div className="wrap">
           {[1, 0.5, 0.25, 0.12].map((o) => (
-            <div key={o} className="stack-col display" style={{ fontSize: "clamp(34px, 6vw, 76px)", opacity: o, color: o === 1 ? "var(--lime)" : "var(--text)" }}>
-              {WORDS.map((w) => <span key={w}>{w}</span>)}
+            <div key={o} className="display" style={{ fontSize: "clamp(28px, 5.5vw, 72px)", lineHeight: 1.02, whiteSpace: "nowrap", overflow: "hidden", opacity: o, color: o === 1 ? "var(--lime)" : "var(--text)" }}>
+              the work isn&rsquo;t done until it&rsquo;s proven.
             </div>
           ))}
         </div>
