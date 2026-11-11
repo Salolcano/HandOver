@@ -1,0 +1,13 @@
+{
+  "title": "Acme website handover",
+  "subject": "acme.com redesign, final delivery",
+  "contractor": "0xCONTRACTOR_ADDRESS (optional, defaults to the client)",
+  "requirements": [
+    { "text": "The source code repository has been transferred to the client", "rule": "Look for a statement that ownership moved to the client", "mandatory": true },
+    { "text": "Documentation for running and deploying the project is published", "rule": "Look for a README or docs page covering setup and deployment", "mandatory": true },
+    { "text": "The contractor's access to production systems has been removed", "rule": "Look for a statement that access was revoked", "mandatory": true },
+    { "text": "A final summary of the work delivered is published", "rule": "", "mandatory": false }
+  ],
+  "evidence_policy": { "min_sources": 1, "min_publishers": 1 },
+  "payout": { "partial_bps": 4000 }
+}

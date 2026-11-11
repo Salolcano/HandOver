@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b0b0b;
+  --panel: #131313;
+  --panel-2: #1a1a1a;
+  --line: #2a2a2a;
+  --text: #f2f2ee;
+  --muted: #9a9a94;
+  --dim: #5f5f5a;
+  --lime: #c9ff3d;
+  --ink: #0b0b0b;
+  --ok: #c9ff3d;
+  --bad: #ff7a6b;
+  --warn: #ffd166;
+  --info: #9ec5ff;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--bg); scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased; min-height: 100vh;
+}
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--lime); color: var(--ink); }
+
+.mono { font-family: var(--font-mono), ui-monospace, monospace; }
+/* big, lowercase, tight: the manifesto voice */
+.display {
+  font-family: var(--font-display), ui-sans-serif, sans-serif;
+  font-weight: 800; text-transform: lowercase; letter-spacing: -0.045em; line-height: 0.88;
+}
+.accent { color: var(--lime); }
+.label { font-family: var(--font-body), sans-serif; font-size: 12px; letter-spacing: 0.02em; color: var(--muted); }
+.num { font-family: var(--font-mono), monospace; font-size: 12px; color: var(--muted); }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.hair { border-top: 1px solid var(--line); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 20px; }
+.card-pad { padding: 24px; }
+
+/* pill buttons, lime on black */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--font-body), sans-serif; font-weight: 600; font-size: 14px;
+  padding: 14px 26px; border: 1px solid var(--lime); background: var(--lime); color: var(--ink);
+  border-radius: 999px; cursor: pointer; transition: transform .15s ease, background .15s ease, color .15s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:disabled { opacity: .35; cursor: not-allowed; transform: none; }
+.btn.ghost { background: transparent; color: var(--text); border-color: var(--line); }
+.btn.ghost:hover { border-color: var(--lime); color: var(--lime); }
+.btn.sm { padding: 9px 16px; font-size: 13px; }
+
+.field {
+  width: 100%; background: var(--bg); border: 1px solid var(--line); color: var(--text);
+  padding: 13px 16px; font-size: 14px; outline: none; font-family: inherit; border-radius: 14px;
+}
+.field:focus { border-color: var(--lime); }
+textarea.field { min-height: 76px; resize: vertical; }
+
+/* the coin: a lime disc that turns, in place of a logo mark */
+.coin {
+  position: relative; aspect-ratio: 1; border-radius: 50%; background: var(--ink); color: var(--lime);
+  display: grid; place-items: center; border: 10px solid var(--ink);
+  box-shadow: inset 0 0 0 3px var(--lime);
+  animation: spin 18s linear infinite;
+}
+.coin::before {
+  content: ""; position: absolute; inset: 9%; border-radius: 50%; border: 2px dashed var(--lime); opacity: .5;
+}
+.coin span { font-family: var(--font-display), sans-serif; font-weight: 800; font-size: 34vw; line-height: 1; letter-spacing: -0.06em; max-width: 100%; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.coin-fixed { animation: none; }
+
+/* hero and the repeating stacked manifesto, after the way big editorial sites repeat a line */
+.hero-lime { background: var(--lime); color: var(--ink); }
+.stack { display: flex; gap: 48px; overflow: hidden; }
+.stack-col { flex: 0 0 auto; line-height: .84; }
+.stack-col span { display: block; }
+
+.marquee { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.marquee-track { display: flex; width: max-content; animation: scroll 40s linear infinite; }
+.marquee-item { padding: 16px 30px; white-space: nowrap; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+
+.chip { display: inline-block; padding: 4px 11px; border: 1px solid var(--line); border-radius: 999px; font-size: 11.5px; color: var(--muted); }
+.chip.ok { color: var(--lime); border-color: #4b6317; }
+.chip.bad { color: var(--bad); border-color: #6a2d2d; }
+.chip.warn { color: var(--warn); border-color: #6a5522; }
+.chip.info { color: var(--info); border-color: #2d4570; }
+
+.row { display: grid; align-items: center; gap: 16px; padding: 18px 0; border-top: 1px solid var(--line); }
+.row:hover .row-title { color: var(--lime); }
+
+.grid-bg { display: none; }
+
+@media (prefers-reduced-motion: reduce) { .coin, .marquee-track { animation: none; } }

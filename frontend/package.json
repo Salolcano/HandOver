@@ -1,0 +1,26 @@
+{
+  "name": "handover-console",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack -p 3270",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "genlayer-js": "2.0.0-rc.2",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "24.10.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "6.0.3",
+    "vitest": "4.0.18"
+  }
+}
