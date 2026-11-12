@@ -27,7 +27,7 @@ All ten were sent to the contract, listed oldest first. The explorer does not de
 |---|---|---|---|---|
 | 1 | Write the handover | `create_handover` | none | [0x23ca9a7ca894047ee82e83ead4d5e7ceaa27fb8b78208cfb85a1092c9fa6b58a](https://explorer-studio-next.genlayer.com/tx/0x23ca9a7ca894047ee82e83ead4d5e7ceaa27fb8b78208cfb85a1092c9fa6b58a) |
 | 2 | Freeze the checklist | `freeze_handover` | none | [0x943dfe367e42095ea73876acd728bb15927851552a0214432098d76a11878dd3](https://explorer-studio-next.genlayer.com/tx/0x943dfe367e42095ea73876acd728bb15927851552a0214432098d76a11878dd3) |
-| 3 | Register evidence | `submit_evidence` | [example.com](https://example.com) | PASTE-TX-3-HASH-HERE |
+| 3 | Register evidence | `submit_evidence` | [example.com](https://example.com) | https://explorer-studio-next.genlayer.com/tx/0xdd796da30b7e94739e34c896915b9cf973ca9a8d727f5faf9b660f541e0ba2e2 |
 | 4 | Request verification | `request_verification` | [example.com](https://example.com) | [0x34db09ada36ab4df33f904917bac7deffcb928ef083837a701540311f3e0c1b3](https://explorer-studio-next.genlayer.com/tx/0x34db09ada36ab4df33f904917bac7deffcb928ef083837a701540311f3e0c1b3) |
 | 5 | Accept the verdict | `accept_verification` | n/a | [0xd1447ac506c834da5b3ac40dbc8d830eee4bbea468b07834bf30428638c51310](https://explorer-studio-next.genlayer.com/tx/0xd1447ac506c834da5b3ac40dbc8d830eee4bbea468b07834bf30428638c51310) |
 | 6 | Finalize and pay | `finalize_handover` | n/a | [0xb2115b4530753a332b30d3878eadd7777f8ffa7cce5641a09ec43e41a836043f](https://explorer-studio-next.genlayer.com/tx/0xb2115b4530753a332b30d3878eadd7777f8ffa7cce5641a09ec43e41a836043f) |
